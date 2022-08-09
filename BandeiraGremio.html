@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+  
+  <canvas width="600" height="400"> 
+  </canvas>
+
+  <script>
+  
+  var tela = document.querySelector('canvas'); 
+  var pincel = tela.getContext('2d'); 
+  
+
+///////////////////
+var pointerX = -1;
+var pointerY = -1;
+document.onmousemove = function(event) {
+  pointerX = event.pageX;
+  pointerY = event.pageY;
+}
+setInterval(pointerCheck, 1000);
+function pointerCheck() {
+  console.log('Cursor at: '+pointerX+', '+pointerY);
+}
+////////////////////
+
+  pincel.fillStyle='black'; 
+  pincel.beginPath();
+  pincel.arc(308, 208, 145, 0, 2*3.14);
+  pincel.fill();
+
+  pincel.fillStyle='darkblue';
+  pincel.beginPath();
+  pincel.ellipse(308, 52, 140, 115, 0, 0, 2*3.14);
+  pincel.fill();
+
+  pincel.beginPath(); 
+  pincel.ellipse(308, 356, 140, 115, 0, 0, 2*3.14);
+  pincel.fill();
+
+  pincel.fillStyle='white'
+  pincel.beginPath();
+  pincel.moveTo(259, 255);
+  pincel.ellipse(308, 358, 140, 120, 0, 4.28, 5.13);
+  pincel.lineTo(350, 294);
+  pincel.lineTo(340, 304);  
+  pincel.lineTo(308, 302); 
+  pincel.lineTo(272, 306); 
+  pincel.lineTo(270, 300);
+  pincel.lineTo(251, 250); 
+  pincel.lineTo(259, 255); 
+  pincel.fill();
+
+  pincel.fillStyle='white'
+  pincel.beginPath();
+  pincel.moveTo(367, 158);
+  pincel.ellipse(308, 48, 140, 119, 0, 1.15, 2);
+  pincel.lineTo(262, 126);
+  pincel.lineTo(284, 102);  
+  pincel.lineTo(308, 108); 
+  pincel.lineTo(337, 106); 
+  pincel.lineTo(340, 110);
+  pincel.lineTo(367, 158); 
+  pincel.fill();
+
+
+
+  pincel.strokeStyle='white';
+  pincel.lineWidth=7;
+  pincel.beginPath();
+  pincel.arc(308, 208, 135, 0, 2*Math.PI);
+  pincel.stroke();
+
+  pincel.beginPath(); 
+  pincel.ellipse(308, 63, 130, 105, 0, 0.62, 2.52, false);
+  pincel.stroke();
+
+  pincel.beginPath(); 
+  pincel.ellipse(308, 345, 130, 105, 0, -0.58, -2.59, true);
+  pincel.stroke();
+
+  pincel.beginPath();
+  pincel.ellipse(308, 63, 60, 45, 0, 0.51, 2.63);
+  pincel.stroke();
+
+  pincel.beginPath(); //polo sul 
+  pincel.ellipse(308, 345, 60, 45, 0, 3.45, -0.37);
+  pincel.stroke();
+
+  pincel.beginPath();
+  pincel.ellipse(308, 208, 60, 120, Math.PI, (Math.PI/2)-5.8, (Math.PI/2)-5.15);
+  pincel.stroke();
+
+  pincel.beginPath();
+  pincel.ellipse(308, 208, 60, 120, Math.PI, Math.PI-5.91, Math.PI-5.27);
+  pincel.stroke();
+
+  pincel.beginPath();
+  pincel.ellipse(308, 208, 60, 120, Math.PI, 5.28, 5.90);
+  pincel.stroke();
+
+  pincel.beginPath();
+  pincel.ellipse(308, 208, 60, 120, Math.PI, 0.42, 1.11);
+  pincel.stroke();
+
+  pincel.fillStyle='black';
+  pincel.font = "308 28px Arial";
+  pincel.textAlign = "center";
+  pincel.textBaseline = "middle";
+  pincel.fillText("1903", 308, 138);
+
+  pincel.fillStyle='white';
+  pincel.font = "600 64px Arial";
+  pincel.textAlign = "center";
+  pincel.textBaseline = "middle";
+  pincel.fillText("GRÊMIO", 308, 216);
+
+  pincel.fillStyle='black';
+  pincel.font = "308 28px Arial";
+  pincel.textAlign = "center";
+  pincel.textBaseline = "middle";
+  pincel.fillText("FBPA", 308, 275);
+
+  pincel.fillStyle='blue';
+  pincel.beginPath();
+  pincel.moveTo(0, 0);
+  pincel.lineTo(0, 208);
+  pincel.ellipse(308, 208, 144, 144, Math.PI, 0, Math.PI/2);
+  pincel.lineTo(308, 0);
+  pincel.fill();
+
+  pincel.fillStyle='blue';
+  pincel.beginPath();
+  pincel.moveTo(0, 208);
+  pincel.lineTo(0, 408);
+  pincel.lineTo(308, 408);
+  pincel.ellipse(308, 208, 144, 144, Math.PI/2, 0, Math.PI/2);
+  pincel.fill();
+
+  pincel.fillStyle='blue';
+  pincel.beginPath();
+  pincel.moveTo(308, 408);
+  pincel.lineTo(608, 408);
+  pincel.lineTo(608, 208);
+  pincel.ellipse(308, 208, 144, 144, 0, 0, Math.PI/2);
+  pincel.lineTo(308, 408);
+  pincel.fill();
+
+  pincel.fillStyle='blue';
+  pincel.beginPath();
+  pincel.moveTo(608, 208);
+  pincel.lineTo(608, 0);
+  pincel.lineTo(308, 0);
+  pincel.ellipse(308, 208, 144, 144, Math.PI*1.5, 0, Math.PI/2);
+  pincel.fill();
+
+  pincel.fillStyle = 'white';
+  pincel.fillRect(278, 0, 60, 67);
+
+  pincel.fillStyle = 'white';
+  pincel.fillRect(278, 342, 60, 67);
+
+  pincel.fillStyle = 'white'; ///////
+  pincel.fillRect(0, 180, 169, 60);
+
+  pincel.fillStyle = 'white'; ///////
+  pincel.fillRect(440, 180, 169, 60);
+
+  pincel.strokeStyle='black';
+  pincel.lineWidth=7;
+  pincel.beginPath();
+  pincel.arc(308, 208, 141, 0, Math.PI*2);
+  pincel.stroke();
+
+  pincel.fillStyle = 'black'; ///////
+  pincel.strokeRect(0, 0, 600, 400);
+
+  </script>
+
+</html>
